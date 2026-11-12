@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  .font-mono, code, pre {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+/* Badge Warna Tahap Risiko */
+.badge-low { background-color: #dcfce7; color: #14532d; border: 1px solid #86efac; }
+.badge-med { background-color: #fef9c3; color: #854d0e; border: 1px solid #fde047; }
+.badge-high { background-color: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+
+/* Print Stylesheet for Lampiran 1 & 2B */
+#print-root {
+  display: none;
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    color: #000000 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  #print-root {
+    display: block !important;
+    width: 100% !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    color: #000000 !important;
+    font-size: 8.5pt !important;
+    line-height: 1.25 !important;
+  }
+
+  #print-root * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .print-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 6px;
+  }
+
+  .print-table th, .print-table td {
+    border: 1px solid #000000;
+    padding: 4px 5px;
+    vertical-align: top;
+    font-size: 8pt;
+  }
+
+  .print-table th {
+    background-color: #f3f4f6 !important;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .print-table td.c {
+    text-align: center;
+  }
+
+  .print-table tr {
+    page-break-inside: avoid;
+  }
+
+  .p-low {
+    background-color: #d1fae5 !important;
+    font-weight: bold;
+    color: #065f46 !important;
+  }
+
+  .p-med {
+    background-color: #fef3c7 !important;
+    font-weight: bold;
+    color: #92400e !important;
+  }
+
+  .p-high {
+    background-color: #fee2e2 !important;
+    font-weight: bold;
+    color: #991b1b !important;
+  }
+}

@@ -1,0 +1,16 @@
+﻿# Salin ke .dev.vars untuk `wrangler dev`.
+# Fail ini tidak masuk ke git.
+
+# Kosongkan untuk membenarkan sebarang e-mel mendaftar (kelulusan pentadbir tetap wajib).
+# Tetapkan "poliku.edu.my" untuk mengehadkan pendaftaran kepada domain institusi.
+ALLOWED_EMAIL_DOMAIN=""
+
+# Iterasi PBKDF2 untuk kata laluan (minimum 50000).
+PASSWORD_ITERATIONS="120000"
+
+# Wajib untuk menyimpan kunci BYOK (Gemini/DeepSeek) dengan selamat.
+# Jana dengan: openssl rand -base64 32
+AI_KEY_ENCRYPTION_SECRET="change-me-to-a-long-random-secret"
+
+APP_ORIGIN="http://localhost:3000"
+ENVIRONMENT="development"
